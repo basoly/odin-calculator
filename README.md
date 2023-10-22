@@ -4,29 +4,28 @@ The Odin Project: Foundations Final Project
 Decomposition:
 
 1. Create functions for all basic math operators (add, subtract, multiply, divide)
-    - [ ] function has two arguments.
-    - [ ] create function for addition
-    - [ ] create function for subtraction
-    - [ ] create function for multiply
-    - [ ] create function for division
+    - [X] function has two arguments.
+    - [X] create function for addition
+    - [X] create function for subtraction
+    - [X] create function for multiply
+    - [X] create function for division
 
 2. Calculator operation: number, operator, another number. 
     Create three variables for each of the parts of a calculator operation.
     Create a variable for the first number, the operator, and 2nd number.
     Use these variables to update display later.
 
-    - [ ] create variable to hold number 1
-    - [ ] create variable to hold operator 
-    - [ ] create variable to hold number 2
-    - [ ] create variable to hold display value
+    - [X] create variable to hold number 1
+    - [X] create variable to hold operator 
+    - [X] create variable to hold number 2
+    - [X] create variable to hold display value
 
 3. Create new function 'operate' that takes operator and 2 numbers and
     then calls one of the above functions on the numbers.
     
-    - [ ] create operate function that takes three arguments (num1, operator, num2)
-    - [ ] the function body contains a callback to one of the operator functions 
-        depending on the value contained in operator. (switch statement?)
-    - [ ] function returns result that updates 'display' variable.
+    - [X] create operate function that takes three arguments (num1, operator, num2)
+    - [X] the function body contains callbacks to the operator functions depending on the value contained in operator. (switch statement?)
+    - [X] function returns result which is used to update 'display' variable
 
 4. Create a basic HTML calculator with buttons for each digit,
     each of the above functions, and an "Equals" key.
