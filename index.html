@@ -8,5 +8,38 @@
 </head>
 <body>
     <script src="calculator.js" defer></script>
+    <div class="calc-container">
+        <div class='box-1' id="display">Display</div>
+        <div class='box-2'>
+            <button id="clear">AC</button>
+            <button id="plus-minus">+/-</button>
+            <button id="percent">%</button>
+        </div>
+        <div id='box-3'>
+            <div>
+                <!-- one child container for 4x3 grid -->
+                <!-- might separate each row within its own div -->
+                <button class="btn" id="9">9</button>
+                <button class="btn" id="8">8</button>
+                <button class="btn" id="7">7</button>
+                <button class="btn" id="6">6</button>
+                <button class="btn" id="5">5</button>
+                <button class="btn" id="4">4</button>
+                <button class="btn" id="3">3</button>
+                <button class="btn" id="2">2</button>
+                <button class="btn" id="1">1</button>
+                <button class="btn" id="equals">=</button>
+                <button class="btn" id="decimal">.</button>
+                <button class="btn" id="0">0</button>
+            </div>
+            <div class="operators">
+                <!-- 1 child box to hold operators -->
+                <button id="division">/</button>
+                <button id="multiply">x</button>
+                <button id="subtract">-</button>
+                <button id="add">+</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

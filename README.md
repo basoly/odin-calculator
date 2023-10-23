@@ -31,23 +31,24 @@ Decomposition:
     each of the above functions, and an "Equals" key.
     There should be a display for the calculator.
     Add a 'clear' button.
-    - [ ] creater large container (flex-dir row)
-    - [ ] create FIVE children of box 2 (dir column)
+    - [X] create large container (flex-dir row)
+    - [X] create three children boxes of large container
+    - [X] create FIVE children of box 2 (dir column)
         - auto-right margin for first child of box 2. (clear button)
-    - [ ] create 2 children of container 3 (3rd child of large container)
-    - [ ] create 2 children of 1st child of cont. 3 (dir. col)
-    - [ ] create 9 children of 1st child of cont. 4
-    - [ ] create 2 column children of 2nd child of 4
-    - [ ] create 3 row children of 2nd child of container 3
+    - [X] create 2 children of container 3 (3rd child of large container)
+    - [X] create 2 children of 1st child of cont. 3 (dir. col)
+    - [X] create 9 children of 1st child of cont. 4
+    - [X] create 2 column children of 2nd child of 4
+    - [X] create 3 row children of 2nd child of container 3
 
     - [ ] apply styles for each button and display box.
+        - [ ] Add borders to everything for easy visualization.
+    
+
+5. Create the functions that populate display when you click number buttons. You should be storing the 'display value' in a variable somewhere for use in the next step.
+
     - [ ] create event handlers for clicking of the buttons
-
-5. Create the functions that populate display when you click number buttons.
-    You should be storing the 'display value' in a variable somewhere for use
-    in the next step.
     - [ ] click event handlers should include function that changes the 'display' variable.
-
 
 6. Make the calculator work. You'll need to store the first number and second number
     that are input into the calculator, utilize the operator that the user

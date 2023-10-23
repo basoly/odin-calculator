@@ -1,0 +1,40 @@
+.calc-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.box-1 {
+/* display box styling */
+}
+
+.box-2{
+
+}
+
+#clear {
+
+}
+
+/* #plus-minus {
+
+}
+
+#percent {
+
+} */
+
+#box-3 .btn {
+    /* button styling */
+}
+
+#box-3 #equals {
+
+}
+
+#box-3 {
+
+}
+
+.operators button {
+
+}

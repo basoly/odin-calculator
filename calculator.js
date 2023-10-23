@@ -52,4 +52,4 @@ let operate = (num1,num2,operator) => {
 
 }
 
-// display = operate(num1, num2, operator)
+// click equal button -> display = operate(num1, num2, operator)
