@@ -1,40 +1,97 @@
 .calc-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    background-color: lightblue;
+    height:300px;
+    width: 300px;
 }
 
 .box-1 {
-/* display box styling */
+display: flex;
+flex-flow: row nowrap;
+border: 2px solid black;
+height: 20%;
+background-color: lightgray;
+font-size: 30px;
+font-weight: bold;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .box-2{
+    display:flex;
+    flex-flow: row nowrap;
+    background-color: lightcoral;
+    height: 50px;
+}
 
+.box-2 button {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid black;
 }
 
 #clear {
-
+    background-color: lightsalmon;
 }
-
-/* #plus-minus {
-
-}
-
-#percent {
-
-} */
 
 #box-3 .btn {
-    /* button styling */
+
 }
 
 #box-3 #equals {
+    background-color: orange;
 
 }
 
 #box-3 {
+    display: flex;
+    flex-flow: row;
+    justify-content:center;
+    /* flex-grow: 1; */
+}
 
+#box-4 {
+    background-color: lightsalmon;
+    width: 300px;
+}
+
+#box-4 .btn {
+    width: 60px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 0 0 0 0;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-grow: 1;
+}
+
+.operators {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: purple;
+    align-items: center;
+    margin-left: 0;
+    flex-grow: 1;
 }
 
 .operators button {
-
+    width: 110px;
+    text-align: center;
+    height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgreen;
 }
+
+.grid-row {
+    display: flex;
+    flex-flow: row nowrap;
+    /* flex-grow: 1; */
+    justify-content: center;
+}
+
