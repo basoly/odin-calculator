@@ -41,8 +41,8 @@ Decomposition:
     - [X] create 2 column children of 2nd child of 4
     - [X] create 3 row children of 2nd child of container 3
 
-    - [ ] apply styles for each button and display box.
-        - [ ] Add borders to everything for easy visualization.
+    - [X] apply styles for each button and display box.
+        - [X] Add borders to everything for easy visualization.
     
 
 5. Create the functions that populate display when you click number buttons. You should be storing the 'display value' in a variable somewhere for use in the next step.
