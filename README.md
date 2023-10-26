@@ -47,24 +47,25 @@ Decomposition:
 
 5. Create the functions that populate display when you click number buttons. You should be storing the 'display value' in a variable somewhere for use in the next step.
 
-    - [ ] create event handlers for clicking of the buttons
-    - [ ] click event handlers should include function that changes the 'display' variable.
+    - [X] create event handlers for clicking of the buttons
+    - [X] click event handlers should include function that changes the 'display' variable.
 
 6. Make the calculator work. You'll need to store the first number and second number
     that are input into the calculator, utilize the operator that the user
     selects, and then operate() on the two numbers when user presses '=' key.
     Update display with solution to the operation.
-    - [ ] when button is clicked, the event handler fires a function that appends the
+    - [X] when button is clicked, the event handler fires a function that appends the
         number of the button (button id) to the display variable.
-    - [ ] the display variable only shows the first or second number. make typing of new 
+    - [X] the display variable only shows the first or second number. make typing of new 
         number clear the display variable.
-    - [ ] the equals button fires the operate function and updates the display variable
+    - [X] the equals button fires the operate function and updates the display variable
         with the result.
 
 7. Other specs: 
-    Calculator should not evaluate more than a single pair of numbers at a time.
+   - [X] Calculator should not evaluate more than a single pair of numbers at a time.
     e.g. 12 + 7 - 2 should evaluate 12+7 first and then 19 - 2 when - is pressed.
-    Round answers with long decimals to avoid display overflow.
-    Pressing clear should wipe out any existing data.
-    Pressing = before entering all numbers or an operator should not cause problems
-    Division by zero should return an error and not be evaluated.
+   - [X] Round answers with long decimals to avoid display overflow.
+   - [X] Pressing clear should wipe out any existing data.
+   - [X] Pressing = before entering all numbers or 
+         an operator should not cause problems
+   - [X] Division by zero should return an error and not be evaluated.

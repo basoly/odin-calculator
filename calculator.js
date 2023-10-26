@@ -25,10 +25,10 @@ let divide = (num1, num2) => {
 }
 
 // Create three variables for each of the parts of a calculator operation.
-let num1 = 0;
-let num2 = 0;
+let num1 = null;
+let num2 = null;
 let display;
-let operator;
+let operator = null;
 
 let operate = (num1,num2,operator) => {
 
@@ -47,7 +47,12 @@ let operate = (num1,num2,operator) => {
             break;
         
     }
-
+    // if length(display string) > 10, toFixed(5)
+    if (result.length > 10) {
+        shortened = result / 1000;
+        result = round(shortened) * 1000
+    }
+    result = parseFloat(result.toFixed(6));
     return result
 
 }
@@ -55,7 +60,6 @@ let operate = (num1,num2,operator) => {
 // click equal button -> display = operate(num1, num2, operator)
 
 let operatorClicked;
-let displayVar;
 // let displayElem;
 let numberClicked;
 let equalsClicked;
@@ -72,7 +76,6 @@ for (let i = 0; i<10; i++) {
         let target = event.target;
         let btnID = target.textContent; // contains button number
         if (operatorClicked) {
-            displayVar = null;
             displayText = '';
             numberClicked = true;
             displayText = displayText + btnID;
@@ -80,7 +83,7 @@ for (let i = 0; i<10; i++) {
             operatorClicked = false;
             equalsClicked = false; // to enable = double click
         } else {
-            displayText = '';
+            // displayText = '';
             displayText = displayText + btnID;
             displayBox.textContent = displayText;
             numberClicked = true;
@@ -96,13 +99,16 @@ btn = document.querySelector('#decimal')
 btn.addEventListener('click', (event) => {
     let target = event.target;
     let btnID = '.';
-    if (operatorClicked) {
+
+    if (displayBox.textContent.includes('.')) {
+        alert('Error: only one decimal point allowed')
+    } else if (operatorClicked) {
         displayVar = null;
         displayText = '';
         numberClicked = true;
         displayText = displayText + btnID;
         displayBox.textContent = displayText;
-        operatorClicked = false;
+        operatorClicked = false; // potential problem
     } else {
         displayText = displayText + btnID;
         displayBox.textContent = displayText;
@@ -114,8 +120,10 @@ btn = document.querySelector('#equals')
 btn.addEventListener('click', (event) => {
     let target = event.target;
     let btnID = '=';
-    // if equals clicked (for multiple clicks)
-    if (!(equalsClicked)) {
+
+    if (num1 == null && num2 == null && operator == null) {
+        alert('select an operator before pressing = button')
+    } else {
         num2 = Number(displayText);
         console.log(`number 1: ${num1}, number 2: ${num2}, operator: ${operator}`)
         result = operate(num1, num2, operator);
@@ -138,7 +146,18 @@ operatorArray = [divOperator, multiplyOperator, subtractOperator, addOperator];
 
 operatorArray.forEach(selector => {
     selector.addEventListener('click', (event) => {
-        if (!(numberClicked)) {
+
+        if (numberClicked && num1 == null) {
+            num1 = Number(displayText);
+            operator = event.target.id
+            operatorClicked = true;
+            numberClicked = false;
+        } else if (!numberClicked && operatorClicked && num2 == null) {
+            num1 = Number(displayText);
+            operator = event.target.id
+            operatorClicked = true;
+            numberClicked = false;          
+        } else if (num1 && !operatorClicked && num2 == null) {
             num2 = Number(displayText);
             operator = event.target.id;
             console.log(`number 1: ${num1}, 
@@ -148,30 +167,10 @@ operatorArray.forEach(selector => {
             console.log(result);
             displayBox.textContent = result;
             num1 = result;
-            num2 = false;
+            num2 = null;
             operatorClicked = true;
-            numberClicked = false;
-        } else if (!operatorClicked && numberClicked) {
-            num2 = Number(displayText);
-            operator = event.target.id;
-            console.log(`number 1: ${num1}, 
-            number 2: ${num2}, 
-            operator: ${operator}`)
-            result = operate(num1, num2, operator);
-            console.log(result);
-
-            displayBox.textContent = result;
-            num1 = result;            num2 = false;
-            operatorClicked = true;
-            numberClicked = false;
-        } else {
-            num1 = Number(displayText);
-            operator = event.target.id
-            operatorClicked = true;
-            numberClicked = false;
-        }  
-        })
-    });
+            numberClicked = false;}
+    })})
 
 clear = document.querySelector('#clear')
 
